@@ -9,37 +9,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="rock_paper_scissors_graphical.js"></script>
   <link href="rock_paper_scissors.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
 
 <header>
+    <div class="headerContainer">
+        <h1 class="title">rock. paper. scissors.</h1>
+        <p class="introPara1">Welcome to the ultimate test of strategy, skill, bravery, lateral thinking, fractal conceptualization and... I'm just testing my JavaScript, okay?</p>
+        
+        <p class="introPara2">First to 5. Don't let the robots win.</p>
 
-    <p>Rock, Paper, Scissors</p>
+    </div>
 
 </header>
 
 <body>
-    <div id="playerDecisionOutput"></div>
-        
-
-    <div id="computerDecisionOutput"></div>
-        
-
+    <div class="outputContainer">
+        <div id="playerDecisionOutput"></div>
+        <div id="computerDecisionOutput"></div>
+    </div>
 
     <div id="playerScore"></div>
+
     <div id="computerScore"></div>
 
 
-    <div id ="rockDecision">
-        <input type="image" name="rockButton" class="imageButton" id="rockButton" img src="/Images/rock.png"/>
+    <div class="buttonContainer">
+        <div id ="rockDecision">
+            <input type="image" name="rockButton" class="imageButton" id="rockButton" img src="/Images/rock.png"/>
+        </div>
+        <div id ="paperDecision">
+            <input type="image" name="paperButton" class="imageButton" id="paperButton" img src="/Images/paper.png"/>
+        </div>
+        <div id ="scissorsDecision">
+            <input type="image" name="scissorsButton" class="imageButton" id="scissorsButton" img src="/Images/scissors.png"/>
+        </div>
     </div>
-
-    <div id ="paperDecision"></div>
-        <input type="image" name="paperButton" class="imageButton" id="paperButton" img src="/Images/paper.png"/>
-
-    <div id ="scissorsDecision"></div>
-        <input type="image" name="scissorsButton" class="imageButton" id="scissorsButton" img src="/Images/scissors.png"/>
-
-
  
 </body>
 
