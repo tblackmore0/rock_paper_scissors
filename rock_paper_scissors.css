@@ -1,0 +1,37 @@
+body {background-color:rgb(252, 242, 240)}
+
+#rockDecision {
+    display: flex;
+    height: 200px;
+    width: 200px;
+}
+
+#rockButton {
+    display: flex;
+    height: 200px;
+    width: 200px;
+}
+
+#paperDecision {
+    display: flex;
+    height: 200px;
+    width: 200px;
+}
+
+#paperButton {
+    display: flex;
+    height: 200px;
+    width: 200px;
+}
+
+#scissorsDecision {
+    display: flex;
+    height: 200px;
+    width: 200px;
+}
+
+#scissorsButton {
+    display: flex;
+    height: 200px;
+    width: 200px;
+}
