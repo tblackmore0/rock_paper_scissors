@@ -10,8 +10,7 @@ body {
         box-sizing: content-box;
 
         width: 99%;
-        height: 150px;
-        border: 5px solid blue;
+        height: 170px;
         position: relative;
     }
         .title {
@@ -21,12 +20,12 @@ body {
         .introPara1 {
             position: relative;
             font-family: 'Inconsolata', monospace;
-            font-size: small;
+            font-size: medium;
         }
         .introPara2 {
             position: relative;
             font-family: 'Inconsolata', monospace;
-            font-size: small;
+            font-size: medium;
         }
 
     .outputContainer {
@@ -37,12 +36,81 @@ body {
         box-sizing: content-box;
 
         width: 99%;
-        height: 200px;
-        border: 5px solid blue;
+        height: 280px;
         position: relative;
-     
-    
+        
     }
+        .playerDecisionOutput {
+            display: flex;
+            flex-direction: column;
+            justify-content: safe center;
+            align-content: safe center;
+            box-sizing: content-box;
+
+            width: 99%;
+            height: 100%;
+            position: relative;
+        }
+            .playerImageOutput {
+                align-self: center;
+                background-image: url("/Images/blank.png");
+                background-size: cover;
+                width: 250px;
+                height: 250px;
+                position: relative;
+            }
+            .playerScoreOutput {
+                width: 30%;
+                height: 20%;
+                position: relative;
+                align-self: center;
+            }
+                .playerScoreOutputText {
+                    font-family: 'Inconsolata', monospace;
+                    font-size: 20px;
+                    margin-top: 10px;
+                    margin-left: 30px;
+                    margin-bottom: 10px;
+                    margin-right: 0px;
+                    position: absolute;
+                    left: 56px;
+                }
+
+        .computerDecisionOutput {
+            display: flex;
+            flex-direction: column;
+            justify-content: safe center;
+            box-sizing: content-box;
+
+            width: 99%;
+            height: 100%;
+            position: relative;
+        }
+            .computerImageOutput {
+                align-self: center;
+                background-image: url("/Images/blank.png");
+                background-size: cover;
+                width: 250px;
+                height: 250px;
+                position: relative;
+            }
+            .computerScoreOutput {
+                width: 30%;
+                height: 20%;
+                position: relative;
+                align-self: center;
+            }
+                .computerScoreOutputText {
+                    font-family: 'Inconsolata', monospace;
+                    font-size: 20px;
+                    margin-top: 10px;
+                    margin-left: 30px;
+                    margin-bottom: 10px;
+                    margin-right: 0px;
+                    position: absolute;
+                    left: 56px;
+                }
+
 
     .buttonContainer {
         display: flex;
@@ -52,34 +120,33 @@ body {
         box-sizing: content-box;
 
         width: 99%;
-        height: 200px;
-        border: 5px solid blue;
+        height: 150px;
         position: relative;
-
     }
+
         #rockDecision {
-            height: 200px;
-            width: 200px;
+            height: 150px;
+            width: 150px;
         }
             #rockButton {
-                height: 200px;
-                width: 200px;
+                height: 150px;
+                width: 150px;
             }
 
         #paperDecision {
-            height: 200px;
-            width: 200px;
+            height: 150px;
+            width: 150px;
         }
             #paperButton {
-                height: 200px;
-                width: 200px;
+                height: 150px;
+                width: 150px;
             }
 
         #scissorsDecision {
-            height: 200px;
-            width: 200px;
+            height: 150px;
+            width: 150px;
         }
             #scissorsButton {
-                height: 200px;
-                width: 200px;
+                height: 150px;
+                width: 150px;
             }
