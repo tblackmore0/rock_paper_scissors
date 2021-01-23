@@ -1,102 +1,129 @@
-<script>
+let playerSelection = 0
+let computerSelection = 0;
+let rps = 0;
+let rpsOutput = 0;
 
-let playerScore = 0;
-let computerScore = 0;
-
-function computerPlay () {
-        const rps = ["Rock", "Paper", "Scissors"];
-        return rps[Math.floor(Math.random()*rps.length)];
-    }
-
-function winLose () {
-    playerScore == 5? playerWin() : computerWin ();
-}
-
-    function playerWin () {
-       if (playerScore == 5) {
-           let winBox = window.confirm(`Congratulations! You are the winner. ${playerScore}|${computerScore}. Would you like to play again?`);
-         if (winBox == true) {
-             game(); 
-             winLose();
-         } else if (winBox == false) {
-             alert ("Thank you for playing.")
-      }
-     
-    
-    function computerWin () {
-     if (computerScore == 5) {
-           let loseBox = window.confirm(`Bad luck! You lose this time. ${playerScore}|${computerScore}. Would you like to play again?`);
-       } if (loseBox = true) {
-             game();
-             winLose(); 
-         } else if (loseBox = false) {
-             alert ("Thank you for playing.")
-       } 
-    } 
-}
-    }
-
-function game () {
-
-    playerScore = 0;
-    computerScore = 0;
-
-    let playerSelection = 0;
-    let computerSelection = 0;
-
-    while (playerScore <5 && computerScore <5) {
-       playRound(playerSelection, computerSelection);
-   } 
-
-      function playRound(playerSelection, computerSelection) {
+// Add event listeners on startup
+window.onload = function() {
+        document.getElementById("rockButton").addEventListener( 'click', changeClassRock);
+        document.getElementById("paperButton").addEventListener( 'click', changeClassPaper);
+        document.getElementById("scissorsButton").addEventListener( 'click', changeClassScissors);
         
-        playerSelection = window.prompt("Rock, Paper, or Scissors?").toLowerCase();
+}    
 
-        computerSelection = computerPlay();         
+document.getElementsByClassName("imageButton").onclick = game(playerSelection, computerSelection);
+// Change player output on selection
+
+function changeClassRock() {
+    document.getElementById("playerImageOutput").className = "playerImageOutputRock";
+    preGame();
+}
+
+function changeClassPaper() {
+    document.getElementById("playerImageOutput").className = "playerImageOutputPaper";
+    preGame();
+}
+
+function changeClassScissors() {
+    document.getElementById("playerImageOutput").className = "playerImageOutputScissors";
+    preGame();
+}
+
+
+function preGame() {
+    playerSelector();
+    displayComputerPlay (rps);
+    if (playerSelection ="rock") {
+        game(playerSelection, computerSelection);
+    } else if (playerSelection ="scissors") {
+        game(playerSelection, computerSelection);
+    } else if (playerSeletcion ="paper") {
+        game(playerSelection, computerSelection);
+    }
+
+
+
+
+// Computer decision function
+
+
+
+// Game function
+
+
+    function displayComputerPlay (rps) {
+        cIO = 
+        rps = ["Rock", "Paper", "Scissors"];
+        let rpsOutput = Math.floor(Math.random()*rps.length);
+        if (rpsOutput == 0) {
+            document.getElementById("computerImageOutput").className += "computerImageOutputRock";
+        } else if (rpsOutput == 1) {
+            document.getElementById("computerImageOutput").className += "computerImageOutputPaper";
+        } else if (rpsOutput == 2) {
+            document.getElementById("computerImageOutput").className += "computerImageOutputScissors";
+        }
+    }
     
+
+
+
+
+function playerSelector() {
+    if (document.getElementById(("playerImageOutput")).className == "playerImageOutputRock") {
+        return playerSelection="rock";
+    } else if (document.getElementById(("playerImageOutput")).className == "playerImageOutputPaper") {
+        return playerSelection="paper";
+    } else if (document.getElementById(("playerImageOutput")).className == "playerImageOutputScissors") {
+        return playerSelection="scissors";
+    } else alert;
+    }
+
+function game(playerSelection, computerSelection) {     
+        
+    computerSelection = rpsOutput;
+
      if (playerSelection == "rock") {
         if (computerSelection ==  "Paper") {
             alert ("You Lose! Paper beats Rock.");
-            return computerScore++
+        
         } else if (computerSelection ==  "Scissors") {
             alert ("You win! Rock beats Scissors.");
-            return playerScore++
+            
         } else if (computerSelection == "Rock") {
             alert ("Tie!");
         }
     } else if (playerSelection == "scissors") {
         if (computerSelection ==  "Paper") {
             alert ("You win! Scissors beats paper.");
-            return playerScore++
+            
         } else if (computerSelection ==  "Scissors") {
             alert ("Tie!");
-        } else if (computerSelection == "Rock") {
+        } else if (computerSelections == "Rock") {
             alert ("You lose! Rock beats scissors.");
-            return computerScore++
+            
         }
     } else if (playerSelection == "paper") {
         if (computerSelection ==  "Paper") {
             alert ("Tie!");
         } else if (computerSelection ==  "Scissors") {
             alert ("You lose! Scissors beats paper.");
-            return computerScore++
+            
         } else if (computerSelection == "Rock") {
             alert ("You win! Paper beats rock.");
-            return playerScore++
+            
         }
-    }  else if (playerSelection !==["rock", "paper", "scissors"] || null) {
-            alert ("Invalid entry. Please enter either rock, paper, or scissors.")
-            playRound ();
-    }
-  }
-}
+        }
+  
     
 
 
 
-game();
-winLose();
 
 
+// Change computer output on execution of computer choice
 
-</script>
+// Change scores on execution
+
+// Change smiley face on player score execution
+
+    }}

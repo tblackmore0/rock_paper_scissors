@@ -26,26 +26,34 @@
 <body>
     <div class="outputContainer">
         <div class="playerDecisionOutput">
-            <div class="playerImageOutput"></div>
-            <div class="playerScoreOutput">
-                <p class="playerScoreOutputText">you</p>
+            <div id="playerImageOutput"class="playerImageOutput"></div>
+            <div class="playerNameOutput">
+                <p class="playerNameOutputText">you</p>
             </div>
         </div>
 
         <div class="computerDecisionOutput">
-            <div class="computerImageOutput"></div>
-            <div class="computerScoreOutput">
-                <p class ="computerScoreOutputText">not you</p>
+            <div id="computerImageOutput" class="computerImageOutput"></div>
+            <div class="computerNameOutput">
+                <p class ="computerNameOutputText">not you</p>
             </div>
         </div>
 
         <div class="face"></div>
+
+        <div class="playerScoreOutput">
+            <p class="playerScoreOutputText">0</p>
+        </div>
+
+        <div class="computerScoreOutput">
+            <p class="computerScoreOutputText">0</p>
+        </div>
     </div>
 
   
 
 
-    <div class="buttonContainer">
+    <div id="buttonContainer">
         <div id ="rockDecision">
             <input type="image" name="rockButton" class="imageButton" id="rockButton" img src="/Images/rock.png"/>
         </div>
