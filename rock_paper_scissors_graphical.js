@@ -2,17 +2,18 @@ let playerSelection = 0
 let computerSelection = 0;
 let rps = 0;
 let rpsOutput = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 // Add event listeners on startup
 window.onload = function() {
         document.getElementById("rockButton").addEventListener( 'click', changeClassRock);
         document.getElementById("paperButton").addEventListener( 'click', changeClassPaper);
         document.getElementById("scissorsButton").addEventListener( 'click', changeClassScissors);
+        scoreUpdate();
         
 }    
 
-document.getElementsByClassName("imageButton").onclick = game(playerSelection, computerSelection);
-// Change player output on selection
 
 function changeClassRock() {
     document.getElementById("playerImageOutput").className = "playerImageOutputRock";
@@ -34,18 +35,40 @@ function preGame() {
     playerSelector();
     displayComputerPlay (rps);
     game(playerSelection, rpsOutput);
+    scoreUpdate();
+    faceUpdate();
+    scoreCheck();
+    }
 
+function faceUpdate () {
+    if (playerScore > computerScore) {
+        const face = document.querySelector ("#face");
+        face.className = "faceSmile";
+    }
+    else if (computerScore > playerScore) {
+        const face = document.querySelector ("#face");
+        face.className = "faceSad";
+    } else if (computerScore == playerScore) {
+        const face = document.querySelector ("#face");
+        face.className = "face";
+    }}
 
+function scoreUpdate() {
+    document.getElementById("playerScoreOutputText").innerHTML = playerScore;
+    document.getElementById("computerScoreOutputText").innerHTML = computerScore;
+}
 
+function scoreCheck() {
+    if (playerScore == 5) {
+        
+    } else if (computerScore ==5) {
 
-// Computer decision function
+    } else if (playerScore <5 || computerScore <5) {
+        return
+    }
+}
 
-
-
-// Game function
-
-
-    function displayComputerPlay () {
+function displayComputerPlay () {
         rps = ["Rock", "Paper", "Scissors"];
         rpsOutput = Math.floor(Math.random()*rps.length);
         if (rpsOutput == 0) {
@@ -62,9 +85,6 @@ function preGame() {
     }
     
 
-
-
-
 function playerSelector() {
     if (document.getElementById(("playerImageOutput")).className == "playerImageOutputRock") {
         return playerSelection="rock";
@@ -75,36 +95,43 @@ function playerSelector() {
     } else alert;
     }
 
+
 function game(playerSelection, rpsOutput) {     
         
     if (playerSelection == "rock") {
+
         if (rpsOutput ==  1) {
-            alert ("You Lose! Paper beats Rock.");
+            return computerScore++;
         
         } else if (rpsOutput ==  2) {
-            alert ("You win! Rock beats Scissors.");
+            return playerScore++;
             
         } else if (computerSelection == 0) {
-            alert ("Tie!");
+            return;
         }
+
     } else if (playerSelection == "scissors") {
+
         if (rpsOutput ==  1) {
-            alert ("You win! Scissors beats paper.");
+            return playerScore++;
             
         } else if (rpsOutput ==  2) {
-            alert ("Tie!");
+            return;
+
         } else if (rpsOutput == 0) {
-            alert ("You lose! Rock beats scissors.");
+            return computerScore++;
             
         }
     } else if (playerSelection == "paper") {
+
         if (rpsOutput ==  1) {
-            alert ("Tie!");
+            return;
+
         } else if (rpsOutput ==  2) {
-            alert ("You lose! Scissors beats paper.");
+            computerScore++;
             
         } else if (rpsOutput == 0) {
-            alert ("You win! Paper beats rock.");
+            playerScore++;
             
         }
         }
@@ -121,4 +148,4 @@ function game(playerSelection, rpsOutput) {
 
 // Change smiley face on player score execution
 
-    }}
+    }
