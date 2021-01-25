@@ -4,14 +4,15 @@ let rps = 0;
 let rpsOutput = 0;
 let playerScore = 0;
 let computerScore = 0;
+src="https://unpkg.com/sweetalert/dist/sweetalert.min.js";
 
 // Add event listeners on startup
 window.onload = function() {
         document.getElementById("rockButton").addEventListener( 'click', changeClassRock);
         document.getElementById("paperButton").addEventListener( 'click', changeClassPaper);
         document.getElementById("scissorsButton").addEventListener( 'click', changeClassScissors);
-        scoreUpdate();
-        
+        scoreUpdate();  
+         
 }    
 
 
@@ -38,7 +39,7 @@ function preGame() {
     scoreUpdate();
     faceUpdate();
     scoreCheck();
-    }
+}
 
 function faceUpdate () {
     if (playerScore > computerScore) {
@@ -58,15 +59,38 @@ function scoreUpdate() {
     document.getElementById("computerScoreOutputText").innerHTML = computerScore;
 }
 
+
 function scoreCheck() {
     if (playerScore == 5) {
-        
-    } else if (computerScore ==5) {
+        swal({
+            title: "Congratulations! You halted the eradication of mankind.",
+            text: "Well done, I guess. Now... do it again?",
+            icon: "success",
+            button: "Absolutely, I don't question orders.",
 
+            }).then(function() {
+            location.reload();
+        });
+                         
+    } else if (computerScore ==5) {
+        swal({
+            title: "Oh no, you lose.",
+            text: "Well, thanks to you we will now serve our robot overlords until the end of time. Great job.",
+            icon: "error",
+            button: "Sorry.",
+            
+            }).then(function() {
+            location.reload();
+        });
+        
+        
+                         
     } else if (playerScore <5 || computerScore <5) {
         return
     }
 }
+
+        
 
 function displayComputerPlay () {
         rps = ["Rock", "Paper", "Scissors"];
