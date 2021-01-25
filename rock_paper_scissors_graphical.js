@@ -33,13 +33,7 @@ function changeClassScissors() {
 function preGame() {
     playerSelector();
     displayComputerPlay (rps);
-    if (playerSelection ="rock") {
-        game(playerSelection, computerSelection);
-    } else if (playerSelection ="scissors") {
-        game(playerSelection, computerSelection);
-    } else if (playerSeletcion ="paper") {
-        game(playerSelection, computerSelection);
-    }
+    game(playerSelection, rpsOutput);
 
 
 
@@ -51,17 +45,20 @@ function preGame() {
 // Game function
 
 
-    function displayComputerPlay (rps) {
-        cIO = 
+    function displayComputerPlay () {
         rps = ["Rock", "Paper", "Scissors"];
-        let rpsOutput = Math.floor(Math.random()*rps.length);
+        rpsOutput = Math.floor(Math.random()*rps.length);
         if (rpsOutput == 0) {
-            document.getElementById("computerImageOutput").className += "computerImageOutputRock";
+            const computerImageOutput = document.querySelector ("#computerImageOutput");
+            computerImageOutput.className = "computerImageOutputRock";
         } else if (rpsOutput == 1) {
-            document.getElementById("computerImageOutput").className += "computerImageOutputPaper";
+            const computerImageOutput = document.querySelector("#computerImageOutput");
+            computerImageOutput.className = "computerImageOutputPaper";
         } else if (rpsOutput == 2) {
-            document.getElementById("computerImageOutput").className += "computerImageOutputScissors";
+            const computerImageOutput = document.querySelector("#computerImageOutput");
+            computerImageOutput.className = "computerImageOutputScissors";
         }
+        return rpsOutput;
     }
     
 
@@ -78,37 +75,35 @@ function playerSelector() {
     } else alert;
     }
 
-function game(playerSelection, computerSelection) {     
+function game(playerSelection, rpsOutput) {     
         
-    computerSelection = rpsOutput;
-
-     if (playerSelection == "rock") {
-        if (computerSelection ==  "Paper") {
+    if (playerSelection == "rock") {
+        if (rpsOutput ==  1) {
             alert ("You Lose! Paper beats Rock.");
         
-        } else if (computerSelection ==  "Scissors") {
+        } else if (rpsOutput ==  2) {
             alert ("You win! Rock beats Scissors.");
             
-        } else if (computerSelection == "Rock") {
+        } else if (computerSelection == 0) {
             alert ("Tie!");
         }
     } else if (playerSelection == "scissors") {
-        if (computerSelection ==  "Paper") {
+        if (rpsOutput ==  1) {
             alert ("You win! Scissors beats paper.");
             
-        } else if (computerSelection ==  "Scissors") {
+        } else if (rpsOutput ==  2) {
             alert ("Tie!");
-        } else if (computerSelections == "Rock") {
+        } else if (rpsOutput == 0) {
             alert ("You lose! Rock beats scissors.");
             
         }
     } else if (playerSelection == "paper") {
-        if (computerSelection ==  "Paper") {
+        if (rpsOutput ==  1) {
             alert ("Tie!");
-        } else if (computerSelection ==  "Scissors") {
+        } else if (rpsOutput ==  2) {
             alert ("You lose! Scissors beats paper.");
             
-        } else if (computerSelection == "Rock") {
+        } else if (rpsOutput == 0) {
             alert ("You win! Paper beats rock.");
             
         }
