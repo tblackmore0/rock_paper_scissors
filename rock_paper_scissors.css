@@ -56,7 +56,7 @@ body {
         }
             .playerImageOutput {
                 align-self: center;
-                background-image: url("/Images/blank.png");
+                background-image: url("/images/blank.png");
                 background-size: cover;
                 width: 250px;
                 height: 250px;
@@ -83,7 +83,7 @@ body {
             justify-content: safe center;
             align-content: safe center;
             box-sizing: content-box;
-            background-image: url("/Images/faceNeutral.png");
+            background-image: url("/images/face_neutral.png");
             background-repeat: no-repeat;
             background-size: 200px 200px;
             background-attachment: fixed;
@@ -107,7 +107,7 @@ body {
         }
             .computerImageOutputBlank {
                 align-self: center;
-                background-image: url("/Images/blank.png");
+                background-image: url("/images/blank.png");
                 background-size: cover;
                 width: 250px;
                 height: 250px;
@@ -225,7 +225,7 @@ body {
 .playerImageOutputRock {
     align-self: center;
     justify-self: center;
-    background-image: url("/Images/rock.png");
+    background-image: url("/images/rock.png");
     background-size: cover;
     width: 220px;
     height: 220px;
@@ -235,7 +235,7 @@ body {
 .playerImageOutputPaper {
     align-self: center;
     justify-self: center;
-    background-image: url("/Images/paper.png");
+    background-image: url("/images/paper.png");
     background-size: cover;
     width: 220px;
     height: 220px;
@@ -246,7 +246,7 @@ body {
 .playerImageOutputScissors {
     align-self: center;
     justify-self: center;
-    background-image: url("/Images/scissors.png");
+    background-image: url("/images/scissors.png");
     background-size: cover;
     width: 220px;
     height: 220px;
@@ -256,7 +256,7 @@ body {
 .computerImageOutputRock {
     align-self: center;
     justify-self: center;
-    background-image: url("/Images/rock.png");
+    background-image: url("/images/rock.png");
     background-size: cover;
     width: 220px;
     height: 220px;
@@ -266,7 +266,7 @@ body {
 .computerImageOutputPaper {
     align-self: center;
     justify-self: center;
-    background-image: url("/Images/paper.png");
+    background-image: url("/images/paper.png");
     background-size: cover;
     width: 220px;
     height: 220px;
@@ -276,7 +276,7 @@ body {
 .computerImageOutputScissors {
     align-self: center;
     justify-self: center;
-    background-image: url("/Images/scissors.png");
+    background-image: url("/images/scissors.png");
     background-size: cover;
     width: 220px;
     height: 220px;
@@ -289,7 +289,7 @@ body {
     justify-content: safe center;
     align-content: safe center;
     box-sizing: content-box;
-    background-image: url("/Images/faceSmile.png");
+    background-image: url("/images/face_smile.png");
     background-repeat: no-repeat;
     background-size: 200px 200px;
     background-attachment: fixed;
@@ -306,7 +306,7 @@ body {
     justify-content: safe center;
     align-content: safe center;
     box-sizing: content-box;
-    background-image: url("/Images/faceSad.png");
+    background-image: url("/images/face_sad.png");
     background-repeat: no-repeat;
     background-size: 200px 200px;
     background-attachment: fixed;
